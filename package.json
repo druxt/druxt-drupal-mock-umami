@@ -12,7 +12,7 @@
     "decoupled-drupal-mock": "1.0.0-alpha.3",
     "decoupled-drupal-mock-umami": "1.0.0-alpha.3",
     "druxt-site": "0.15.1",
-    "druxt-umami-ui": "file:vendor/druxt-umami-ui-0.2.0-1f6cc29.tgz",
+    "druxt-umami-ui": "file:vendor/druxt-umami-ui-0.1.0-a3015e2.tgz",
     "nuxt": "2.18.1",
     "vue-i18n": "8.28.2",
     "webpack": "4.47.0"
