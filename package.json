@@ -1,0 +1,22 @@
+{
+  "name": "druxt-drupal-mock-umami",
+  "private": true,
+  "description": "A Druxt site on decoupled-drupal-mock's Umami preset: Drupal's answers, with no Drupal site.",
+  "scripts": {
+    "dev": "node scripts/dev.mjs",
+    "build": "node scripts/dev.mjs build",
+    "mock": "decoupled-drupal-mock serve umami --port 3005 --overlay ./overlays/language-routing-patches.json.gz"
+  },
+  "dependencies": {
+    "axios": "0.34.0",
+    "decoupled-drupal-mock": "1.0.0-alpha.3",
+    "decoupled-drupal-mock-umami": "1.0.0-alpha.3",
+    "druxt-site": "0.15.1",
+    "nuxt": "2.18.1",
+    "webpack": "4.47.0"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "license": "MIT"
+}
