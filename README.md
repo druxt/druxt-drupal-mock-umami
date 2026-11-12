@@ -2,7 +2,9 @@
 
 A [Druxt](https://druxtjs.org) site running on Drupal's Umami demo content, with no Drupal site, in the look of the [Umami demo](https://umami.demo.druxtjs.org). The backend is [decoupled-drupal-mock](https://github.com/Decipher/decoupled-drupal-mock)'s Umami preset: Drupal 11's JSON:API, Decoupled Router and menu answers, recorded from a real install and served by the mock.
 
-[Open in StackBlitz](https://stackblitz.com/github/druxt/druxt-drupal-mock-umami/tree/0.x?file=nuxt.config.js)
+[![The Umami demo's borscht recipe, rendered by Druxt from the mock](.github/poster.png)](https://stackblitz.com/github/druxt/druxt-drupal-mock-umami?file=nuxt.config.js)
+
+[Open in StackBlitz](https://stackblitz.com/github/druxt/druxt-drupal-mock-umami?file=nuxt.config.js). The first start takes a couple of minutes: StackBlitz installs the packages, starts the mock and builds the site in your browser.
 
 ## Run it
 
