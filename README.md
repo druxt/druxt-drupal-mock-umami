@@ -1,6 +1,6 @@
 # Druxt on decoupled-drupal-mock: Umami
 
-A [Druxt](https://druxtjs.org) site running on Drupal's Umami demo content, with no Drupal site. The backend is [decoupled-drupal-mock](https://github.com/Decipher/decoupled-drupal-mock)'s Umami preset: Drupal 11's JSON:API, Decoupled Router and menu answers, recorded from a real install and served by the mock.
+A [Druxt](https://druxtjs.org) site running on Drupal's Umami demo content, with no Drupal site, in the look of the [Umami demo](https://umami.demo.druxtjs.org). The backend is [decoupled-drupal-mock](https://github.com/Decipher/decoupled-drupal-mock)'s Umami preset: Drupal 11's JSON:API, Decoupled Router and menu answers, recorded from a real install and served by the mock.
 
 [Open in StackBlitz](https://stackblitz.com/github/druxt/druxt-drupal-mock-umami/tree/0.x?file=nuxt.config.js)
 
@@ -17,8 +17,9 @@ The browser never talks to the mock directly. Every Drupal request goes through 
 
 ## What's in it
 
-- `nuxt.config.js`: Druxt pointed at the mock, with the proxy for JSON:API, the Decoupled Router and Drupal's files.
+- `nuxt.config.js`: Druxt pointed at the mock, with the proxy for JSON:API, the Decoupled Router and Drupal's files, and the query settings the Umami components expect.
 - `scripts/dev.mjs`: starts the mock and Nuxt together.
+- [`druxt-umami-ui`](https://github.com/druxt/druxt-umami-ui): the Umami demo's theme, layout and Druxt components. It isn't on npm yet, so `package.json` takes a tarball of a commit on its `0.x` branch.
 - `overlays/language-routing-patches.json.gz`: the preset records Drupal's released modules only. This overlay, from the mock's repository, records the two language-routing patches Druxt relies on, [Decoupled Router #3111456](https://www.drupal.org/i/3111456) and [Druxt #3273228](https://www.drupal.org/i/3273228), so `/es` paths resolve.
 
 The site is read-only. The mock's control routes, for signing in and resetting writes in tests, are left off.
