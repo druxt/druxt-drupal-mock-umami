@@ -19,7 +19,7 @@ The browser never talks to the mock directly. Every Drupal request goes through 
 
 - `nuxt.config.js`: Druxt pointed at the mock, with the proxy for JSON:API, the Decoupled Router and Drupal's files, and the query settings the Umami components expect.
 - `scripts/dev.mjs`: starts the mock and Nuxt together.
-- [`druxt-umami-ui`](https://github.com/druxt/druxt-umami-ui): the Umami demo's theme, layout and Druxt components. It isn't on npm yet, so `package.json` takes a tarball of a commit on its `0.x` branch.
+- `vendor/druxt-umami-ui-0.1.0-e6ffccb.tgz`: [`druxt-umami-ui`](https://github.com/druxt/druxt-umami-ui), the Umami demo's theme, layout and Druxt components, packed from commit `e6ffccb` on its `0.x` branch. It isn't on npm yet, and StackBlitz can't download a tarball from GitHub, so the packed package ships here. To update it, run `npm pack` in a checkout of druxt-umami-ui and replace the file.
 - `overlays/language-routing-patches.json.gz`: the preset records Drupal's released modules only. This overlay, from the mock's repository, records the two language-routing patches Druxt relies on, [Decoupled Router #3111456](https://www.drupal.org/i/3111456) and [Druxt #3273228](https://www.drupal.org/i/3273228), so `/es` paths resolve.
 
 The site is read-only. The mock's control routes, for signing in and resetting writes in tests, are left off.
