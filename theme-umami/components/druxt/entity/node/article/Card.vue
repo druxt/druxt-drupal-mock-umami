@@ -1,5 +1,5 @@
 <script>
-import NodeCard from '../Card.vue'
+import NodeCard from '#wrappers/DruxtEntityNodeCard'
 
 /**
  * The most specific suggestion DruxtEntity looks for. Without it the lookup

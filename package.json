@@ -7,14 +7,16 @@
     "build": "node scripts/dev.mjs build",
     "mock": "decoupled-drupal-mock serve umami --port 3005 --overlay ./overlays/language-routing-patches.json.gz"
   },
+  "workspaces": [
+    "theme-umami"
+  ],
   "dependencies": {
     "axios": "0.34.0",
     "decoupled-drupal-mock": "1.0.0-alpha.3",
     "decoupled-drupal-mock-umami": "1.0.0-alpha.3",
     "druxt-site": "0.15.1",
-    "druxt-ui-mami": "file:vendor/druxt-ui-mami-0.1.0-62331ca.tgz",
+    "druxt-theme-umami": "0.1.0",
     "nuxt": "2.18.1",
-    "vue-i18n": "8.28.2",
     "webpack": "4.47.0"
   },
   "engines": {

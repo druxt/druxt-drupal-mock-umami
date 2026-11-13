@@ -1,3 +1,9 @@
+<!--
+  The recipe page. This file overrides druxt-theme-umami's wrapper of the same
+  name, DruxtEntityNodeRecipeFull, which the theme's DruxtEntityNodeRecipeDefault
+  extends by name, so it renders every recipe. Delete it and the theme's own,
+  theme-umami/components/druxt/entity/node/recipe/Full.vue, renders instead.
+-->
 <template>
   <UmamiRecipePage>
     <UmamiRecipeHero :title="entity.attributes.title">
@@ -48,7 +54,7 @@
 
 <script>
 import { DruxtEntityMixin } from 'druxt-entity'
-import { langMixin } from '../../../../../utils/lang'
+import { langMixin } from 'druxt-theme-umami/utils/lang'
 
 export default {
   mixins: [langMixin, DruxtEntityMixin],
