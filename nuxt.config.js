@@ -8,19 +8,12 @@ const backend = 'http://127.0.0.1:3005'
 export default {
   target: 'server',
   telemetry: false,
-  // druxt-ui-mami brings the Umami theme and its Umami* components; this
-  // site's own layouts, in layouts/, replace DruxtSite's.
-  modules: ['druxt-site', 'druxt-ui-mami'],
-  // The Druxt components, as the Umami demo names them:
-  // components/druxt/entity/node/recipe/Full.vue is DruxtEntityNodeRecipeFull,
-  // which Druxt renders for a recipe in full. components/app/ is flattened:
-  // components/app/MobileDrawer.vue is AppMobileDrawer.
-  components: [
-    { path: '~/components/druxt', prefix: 'Druxt' },
-    { path: '~/components/app', prefix: 'App', pathPrefix: false },
-  ],
-  // The frontend's own words, in English and Spanish, by the path's prefix.
-  plugins: ['~/plugins/i18n.js'],
+  // druxt-theme-umami is the site's Druxt layer: the wrappers that render
+  // Drupal's entities, fields, blocks and views with druxt-ui-mami's Umami*
+  // components, the layouts and the words. A component in this site's own
+  // components/ replaces the theme's of the same name, as
+  // components/druxt/entity/node/recipe/Full.vue does.
+  modules: ['druxt-site', 'druxt-theme-umami'],
   druxt: {
     baseUrl: backend,
     proxy: { api: true },

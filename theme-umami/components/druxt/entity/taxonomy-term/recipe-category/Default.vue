@@ -1,5 +1,5 @@
 <script>
-import Default from '../Default.vue'
+import Default from '#wrappers/DruxtEntityTaxonomyTermDefault'
 
 export default {
   extends: Default,

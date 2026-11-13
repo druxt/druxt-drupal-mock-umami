@@ -1,0 +1,32 @@
+{
+  "name": "druxt-theme-umami",
+  "version": "0.1.0",
+  "private": true,
+  "description": "A Druxt theme for Nuxt 2: the Umami demo's wrapper components, layouts and words, over druxt-ui-mami's look.",
+  "license": "MIT",
+  "main": "module.js",
+  "files": [
+    "components",
+    "layouts",
+    "locales",
+    "plugins",
+    "templates",
+    "utils",
+    "module.js"
+  ],
+  "keywords": [
+    "druxt",
+    "drupal",
+    "nuxt",
+    "umami",
+    "theme"
+  ],
+  "dependencies": {
+    "druxt-ui-mami": "file:../vendor/druxt-ui-mami-0.1.0-62331ca.tgz",
+    "vue-i18n": "8.28.2"
+  },
+  "peerDependencies": {
+    "druxt-site": "^0.15.0",
+    "nuxt": "^2.15.0"
+  }
+}
